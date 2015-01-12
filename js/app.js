@@ -15,7 +15,6 @@ function getRandomItem(array) {
 
 
 // Enemies our player must avoid
-//Given//
 var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
@@ -49,9 +48,7 @@ Enemy.prototype.getRandomVariables = function() {
 }
 
 // Draw the enemy on the screen, required method for game
-//Given//
 Enemy.prototype.render = function() {
-    //Given//
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
@@ -104,7 +101,7 @@ Player.prototype.render = function() {
 }
 
 Player.prototype.handleInput = function (key) {
-    document.getElementById("p1").innerHTML = "";
+    document.getElementById("p1").innerHTML = "Use the arrow keys to move.";
     if ((key == "up") && (this.y > -80))
         this.y -= 83;
     else if ((key == "down") && (this.y < 400))
